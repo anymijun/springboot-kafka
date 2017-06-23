@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: bm-springboot-kafka
+  kafka:
+      bootstrap-servers: 192.168.240.42:8092,192.168.240.43:8092,192.168.240.44:8092
+      consumer:
+        group-id: mygroup
+        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        value-serializer: org.apache.kafka.common.serialization.StringSerializer
+        #
+        auto-offset-reset: earliest
